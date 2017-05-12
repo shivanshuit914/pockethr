@@ -44,4 +44,52 @@ class FeatureContext implements Context
     {
         throw new PendingException();
     }
+
+    /**
+     * @Then User should allow to login
+     */
+    public function userShouldAllowToLogin()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given A user with Email :arg1 is already registered
+     */
+    public function aUserWithEmailIsAlreadyRegistered($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When User try to register to the system with email ":arg1 and password :arg2
+     */
+    public function userTryToRegisterToTheSystemWithEmailAndPassword($arg1, $arg2)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then User should not allow to register
+     */
+    public function userShouldNotAllowToRegister()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given A user with Email :arg1
+     */
+    public function aUserWithEmail($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then User should allow to register
+     */
+    public function userShouldAllowToRegister()
+    {
+        throw new PendingException();
+    }
 }
