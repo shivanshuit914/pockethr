@@ -22,11 +22,11 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given User with Email :arg1
+     * @Given User with Email :email
      */
-    public function userWithEmail($arg1)
+    public function userWithEmail(string $email)
     {
-        throw new PendingException();
+        \App\User\User::withEmail($email);
     }
 
     /**
