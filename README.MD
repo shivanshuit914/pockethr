@@ -1,6 +1,6 @@
 # PocketHR
 
-> Small PHP application for practice
+> Small PHP application for practice Laravel
 
 ## Installation
 
