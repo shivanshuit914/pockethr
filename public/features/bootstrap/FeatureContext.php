@@ -1,5 +1,6 @@
 <?php
 
+use App\User\User;
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
@@ -26,13 +27,13 @@ class FeatureContext implements Context
      */
     public function userWithEmail(string $email)
     {
-        \App\User\User::withEmail($email);
+        User::withEmail($email);
     }
 
     /**
-     * @When User try to login to the system with password :arg1
+     * @When User try to login to the system with password :password
      */
-    public function userTryToLoginToTheSystemWithPassword($arg1)
+    public function userTryToLoginToTheSystemWithPassword(string $password)
     {
         throw new PendingException();
     }
@@ -54,17 +55,17 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given A user with Email :arg1 is already registered
+     * @Given A user with Email :email is already registered
      */
-    public function aUserWithEmailIsAlreadyRegistered($arg1)
+    public function aUserWithEmailIsAlreadyRegistered(string $email)
     {
         throw new PendingException();
     }
 
     /**
-     * @When User try to register to the system with email ":arg1 and password :arg2
+     * @When User try to register to the system with email :email and password :password
      */
-    public function userTryToRegisterToTheSystemWithEmailAndPassword($arg1, $arg2)
+    public function userTryToRegisterToTheSystemWithEmailAndPassword(string $email, string $password)
     {
         throw new PendingException();
     }
@@ -78,9 +79,9 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given A user with Email :arg1
+     * @Given A user with Email :email
      */
-    public function aUserWithEmail($arg1)
+    public function aUserWithEmail(string $email)
     {
         throw new PendingException();
     }
