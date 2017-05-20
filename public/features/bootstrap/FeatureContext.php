@@ -1,5 +1,7 @@
 <?php
 
+use App\Repository\UsersRepository;
+use App\User\Login\LoginHandler;
 use App\User\User;
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
@@ -35,7 +37,7 @@ class FeatureContext implements Context
      */
     public function userTryToLoginToTheSystemWithPassword(string $password)
     {
-        throw new PendingException();
+        $loginHandler = new LoginHandler(new UsersRepository());
     }
 
     /**
